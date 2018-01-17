@@ -1,0 +1,13 @@
+ <input />
+ <script src="js/jquery-1.11.3.min.js"></script>
+ <script type='text/javascript'>
+			$(document).ready(function(){
+				$("input").keydown(function(){
+					$('input').css('background-color','yellow');
+			});	
+			
+			$("input").keyup(function() {
+				$("input").css('background-color','pink');
+			});
+			});
+</script>

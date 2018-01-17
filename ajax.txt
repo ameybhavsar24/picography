@@ -1,0 +1,3 @@
+<span class='hidden'>
+Email : <input id='email' name='email' type='email' placeholder="What's your Email ID?" required/>
+</span>
