@@ -4,6 +4,13 @@ $homeLink = 'index.php';
 $regLink = 'register.php';
 $logLink = '#';
 $supportLink = 'support.php';
+
+if(isset($_POST['login'])) {
+	$_SESSION['email']= $_POST['email'];
+	$_SESSION['password']= $_POST['password'];
+	header("Location: logProc.php");
+}
+
 ?>
 <!doctype html> 
 <html lang="en">
@@ -80,7 +87,7 @@ $supportLink = 'support.php';
 	<header>
         <div class="header-content">
             <div class="header-content-inner">
-			<form  id='Form' method='POST'>
+			<form  id='Form' method='POST' action=''>
 			
                 <h1><span class="fa fa-user" ></span>Login</h1>
 				
@@ -92,7 +99,7 @@ $supportLink = 'support.php';
 </label>
 				<!-- <span id='pwd-eye' onClick='pass()' style='margin : 8px; line-height: -2px; position: absolute' class='fa fa-eye'></span>-->
 				<br /><br />
-				
+				<input type='hidden' name='login' value='1' />
 				<button href="#" class="btn btn-primary btn-lg" type='submit'>Submit</button>
 				
 			</form>
